@@ -37,10 +37,10 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: appimage
-        path: /output/hotspot*.AppImage
+        path: ${{ github.workspace }}/output/hotspot*.AppImage
 
     - name: Upload Debug Info
       uses: actions/upload-artifact@v3
       with:
         name: debuginfo
-        path: /output/hotspot-debuginfo-*
+        path: ${{ github.workspace }}/output/hotspot-debuginfo-*
