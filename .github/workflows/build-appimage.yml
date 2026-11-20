@@ -34,13 +34,13 @@ jobs:
       run: scripts/appimage/build_appimage.sh "$PWD" "$PWD/build"
 
     - name: Upload AppImage
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: appimage
         path: /output/hotspot*.AppImage
 
     - name: Upload Debug Info
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: debuginfo
         path: /output/hotspot-debuginfo-*
