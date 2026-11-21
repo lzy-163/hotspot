@@ -15,3 +15,6 @@ jobs:
         python-version: 3.11.x
     - uses: pre-commit/action@v3.0.1
     - uses: webiny/action-conventional-commits@v1.3.0
+      if: github.event_name == 'pull_request'
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
