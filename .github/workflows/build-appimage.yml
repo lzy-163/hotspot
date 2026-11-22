@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/kdab/kdesrc-build
+      options: --privileged
 
     steps:
     - name: Checkout
