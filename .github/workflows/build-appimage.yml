@@ -31,7 +31,7 @@ jobs:
         submodules: recursive
 
     - name: Build
-      run: scripts/appimage/build_appimage.sh "$PWD" "$PWD/build"
+      run: scripts/appimage/build_appimage.sh "$GITHUB_WORKSPACE" "$GITHUB_WORKSPACE/build"
 
     - name: Upload AppImage
       uses: actions/upload-artifact@v3
